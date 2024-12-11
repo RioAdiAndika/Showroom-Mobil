@@ -24,7 +24,7 @@ Route::get('/shop-detail/{id}', [ShopDetailController::class, 'index'])->name('s
 
 
 Route::get('/success', [CheckoutController::class, 'success'])->name('success');
-// tes
+// tes11
 // Route::get('/home', function () {
 //     return view('pages.home');
 // })->middleware(['auth', 'verified'])->name('home');
