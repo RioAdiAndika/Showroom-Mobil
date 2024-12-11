@@ -24,7 +24,7 @@ Route::get('/shop-detail/{id}', [ShopDetailController::class, 'index'])->name('s
 
 
 Route::get('/success', [CheckoutController::class, 'success'])->name('success');
-
+// tes
 // Route::get('/home', function () {
 //     return view('pages.home');
 // })->middleware(['auth', 'verified'])->name('home');
@@ -32,18 +32,18 @@ Route::get('/success', [CheckoutController::class, 'success'])->name('success');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
     Route::post('/checkout/store', [CheckoutController::class, 'store'])->name('checkout.store');
-    
+
     Route::post('/add-to-cart/{id}', [ShopDetailController::class, 'add'])->name('add-to-cart');
     Route::get('/cart', [CartController::class, 'index'])->name('cart');
     Route::delete('/cart/{id}', [CartController::class, 'delete'])->name('cart-delete');
-    
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    
+
     Route::get('/order-list', [OrderListController::class, 'index'])->name('order');
     Route::get('/order-list-detail/{transactions_id}', [OrderListController::class, 'show'])->name('order.detail');
-    
+
     Route::post('/review/store', [CustomerReviewController::class, 'store'])->name('review.store');
     Route::post('/review/update/{id}', [CustomerReviewController::class, 'update'])->name('review.update');
 });
@@ -64,7 +64,7 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/product/{id}', [ProductController::class, 'edit'])->name('product.edit');
     Route::post('/product/update/{id}', [ProductController::class, 'update'])->name('product.update');
     Route::delete('/product/{id}', [ProductController::class, 'destroy'])->name('product.destroy');
-    
+
     Route::get('/transaction', [TransactionController::class, 'index'])->name('transaction');
     Route::get('/transaction/{id}', [TransactionController::class, 'edit'])->name('transaction.edit');
     Route::post('/transaction/update/{id}', [TransactionController::class, 'update'])->name('transaction.update');
