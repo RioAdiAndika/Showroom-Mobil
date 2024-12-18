@@ -16,16 +16,16 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'eko',
-            'email' => 'eko@gmail.com',
+            'name' => 'eko123',
+            'email' => 'eko123@gmail.com',
             'email_verified_at' => date('Y-m-d H:i:s', time()),
             'password' => bcrypt('07522'),
             'is_admin' => true
         ]);
 
         User::factory()->create([
-            'name' => 'rio',
-            'email' => 'rio@gmail.com',
+            'name' => 'rio321',
+            'email' => 'rio321@gmail.com',
             'email_verified_at' => date('Y-m-d H:i:s', time()),
             'password' => bcrypt('07515'),
             'is_admin' => false
